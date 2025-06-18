@@ -78,7 +78,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 View Our Services
               </Button>
             </Link>
@@ -200,7 +200,7 @@ const Index = () => {
               </Button>
             </Link>
             <a href="tel:+27111234567">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Call: +27 11 123 4567
               </Button>
             </a>
