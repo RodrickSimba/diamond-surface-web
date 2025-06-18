@@ -63,12 +63,12 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right Content - Kitchen Image */}
+            {/* Right Content - Professional Cleaner Image */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&crop=center"
-                  alt="Modern clean kitchen"
+                  src="/lovable-uploads/09291f65-8bff-426a-81e9-145502069fd6.png"
+                  alt="Professional cleaning service - smiling cleaner with equipment"
                   className="w-full h-[500px] object-cover"
                 />
                 
