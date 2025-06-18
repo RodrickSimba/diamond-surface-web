@@ -51,7 +51,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Diamond Surfaces
+              About Diamond Surface
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Where Cleanliness Shines Bright
@@ -69,13 +69,14 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Diamond Surfaces is committed to creating clean, safe, and inviting spaces through 
-                expert cleaning services tailored for homes and businesses across South Africa.
+                At Diamond Surface, we specialize in delivering high-quality, reliable cleaning services 
+                for both residential and commercial clients. Our mission is simple: provide spotless, 
+                safe, and hygienic environments that exceed client expectations.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                We believe that a clean environment enhances quality of life and productivity. 
-                Our team of dedicated professionals uses the latest techniques and eco-friendly 
-                products to deliver exceptional results that exceed expectations.
+                With a skilled and trustworthy team, modern cleaning equipment, and a strong attention 
+                to detail, we aim to become the preferred cleaning partner across homes, offices, and 
+                specialized spaces.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -92,16 +93,16 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <img 
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=200&fit=crop&crop=center" 
-                alt="Clean living room"
-                className="rounded-lg shadow-md"
+                src="/lovable-uploads/6e441783-bbcb-465a-9504-c34cd16de39a.png" 
+                alt="Professional cleaning team working in kitchen"
+                className="rounded-lg shadow-md w-full h-64 object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1524230572899-a752b3835840?w=300&h=200&fit=crop&crop=center" 
-                alt="Modern office space"
-                className="rounded-lg shadow-md mt-8"
+                src="/lovable-uploads/d00d51b8-61a2-4137-a680-d69eb9c8427c.png" 
+                alt="Professional cleaner with cleaning supplies"
+                className="rounded-lg shadow-md w-full h-64 object-cover"
               />
             </div>
           </div>
@@ -197,8 +198,42 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Contact Information */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Contact Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with Diamond Surface for all your cleaning needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">📍 Location</h3>
+              <p className="text-gray-600">Based in Johannesburg</p>
+            </div>
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">📧 Email</h3>
+              <p className="text-gray-600">murendenibuhle6@gmail.com</p>
+            </div>
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">📞 Phone</h3>
+              <p className="text-gray-600">0792386289</p>
+              <p className="text-gray-600">+27 61 969 8601</p>
+            </div>
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">📄 Documentation</h3>
+              <p className="text-gray-600">CSD Summary & Tax Compliance available on request</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -237,12 +272,12 @@ const About = () => {
             <div className="bg-blue-600 text-white p-8 rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Our Promise</h3>
               <p className="text-blue-100 mb-6">
-                "At Diamond Surfaces, we don't just clean - we create environments where 
+                "At Diamond Surface, we don't just clean - we create environments where 
                 people can thrive. Every space we touch reflects our commitment to quality 
                 and our passion for excellence."
               </p>
               <div className="text-right">
-                <p className="font-semibold">- The Diamond Surfaces Team</p>
+                <p className="font-semibold">- The Diamond Surface Team</p>
               </div>
             </div>
           </div>

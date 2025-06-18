@@ -9,49 +9,49 @@ const Services = () => {
   const residentialServices = [
     {
       name: "Standard House Cleaning",
-      description: "Regular dusting, vacuuming, sweeping, mopping, and general tidying to keep your home fresh and clean.",
+      description: "Dusting, sweeping, mopping, vacuuming, bathroom & kitchen cleaning, and general tidying.",
       features: ["All rooms cleaned", "Kitchen & bathroom sanitized", "Floors mopped & vacuumed", "Surfaces dusted"]
     },
     {
       name: "Deep Cleaning",
-      description: "Intensive top-to-bottom cleaning service perfect for seasonal needs or one-time deep clean requirements.",
-      features: ["Inside appliances", "Baseboards & windowsills", "Light fixtures", "Cabinet interiors"]
+      description: "Full home sanitation including inside appliances, under furniture, baseboards, tiles/grout, etc.",
+      features: ["Inside appliances", "Under furniture cleaning", "Baseboards & tiles/grout", "Complete sanitization"]
     },
     {
       name: "Move-In/Move-Out Cleaning",
-      description: "Comprehensive cleaning service for preparing homes during relocation, ensuring a fresh start.",
-      features: ["Complete property clean", "All rooms & storage", "Kitchen deep clean", "Bathroom sanitization"]
+      description: "Full house clean-up before or after relocation, including cupboards, walls, and floors.",
+      features: ["Complete property clean", "Cupboards & storage", "Wall cleaning", "Floor deep clean"]
     },
     {
       name: "Post-Construction Cleaning",
-      description: "Specialized cleaning to remove dust, paint splatter, and debris from renovations or new builds.",
-      features: ["Construction dust removal", "Paint splatter cleanup", "Debris removal", "Final polish"]
+      description: "Safe removal of dust, paint, debris, and fine construction residue from newly built or renovated homes.",
+      features: ["Construction dust removal", "Paint & debris cleanup", "Fine residue cleaning", "Final polish"]
     }
   ];
 
   const commercialServices = [
     {
-      name: "Office Cleaning",
-      description: "Professional scheduled cleaning services for office environments, available daily or weekly.",
-      features: ["Desk & workspace cleaning", "Common area maintenance", "Restroom sanitization", "Trash removal"]
+      name: "Office Cleaning (Daily, Weekly, or Monthly)",
+      description: "Desks, floors, kitchens, bathrooms, reception areas—after-hours or daytime service available.",
+      features: ["Desk & workspace cleaning", "Floor maintenance", "Kitchen & bathroom cleaning", "Reception area care"]
     },
     {
-      name: "Retail Space Cleaning",
-      description: "Specialized cleaning for retail environments to maintain a welcoming shopping atmosphere.",
-      features: ["Floor care", "Display cleaning", "Customer area maintenance", "Storage area organization"]
+      name: "Post-Renovation Commercial Cleaning",
+      description: "Deep dust removal, glass/window cleaning, and waste removal after commercial renovations.",
+      features: ["Deep dust removal", "Glass & window cleaning", "Waste removal", "Complete restoration"]
     }
   ];
 
   const specializedServices = [
     {
-      name: "Carpet & Upholstery Cleaning",
-      description: "Expert fabric cleaning with stain removal, deodorizing, and maintenance for carpets and furniture.",
-      features: ["Deep steam cleaning", "Stain removal", "Odor elimination", "Fabric protection"]
+      name: "Carpet Cleaning",
+      description: "Steam or dry extraction for offices, lounges, and high-traffic areas.",
+      features: ["Steam cleaning", "Dry extraction", "Stain removal", "High-traffic area focus"]
     },
     {
-      name: "Window Cleaning",
-      description: "Professional interior and exterior window cleaning for crystal clear views.",
-      features: ["Streak-free cleaning", "Frame cleaning", "Sill maintenance", "Screen cleaning"]
+      name: "Upholstery Cleaning",
+      description: "Sofas, chairs, ottomans, and other furniture using non-damaging professional methods.",
+      features: ["Fabric protection", "Non-damaging methods", "Furniture restoration", "Professional equipment"]
     }
   ];
 
@@ -118,7 +118,7 @@ const Services = () => {
           
           {/* Residential Services */}
           <ServiceCategory
-            title="Residential Cleaning"
+            title="🏠 Residential Cleaning"
             icon={Home}
             services={residentialServices}
             bgColor="bg-blue-600"
@@ -126,7 +126,7 @@ const Services = () => {
 
           {/* Commercial Services */}
           <ServiceCategory
-            title="Commercial Cleaning"
+            title="🏢 Commercial Cleaning"
             icon={Building2}
             services={commercialServices}
             bgColor="bg-green-600"
@@ -134,7 +134,7 @@ const Services = () => {
 
           {/* Specialized Services */}
           <ServiceCategory
-            title="Specialized Cleaning"
+            title="🧼 Specialized Cleaning Services"
             icon={Sparkles}
             services={specializedServices}
             bgColor="bg-purple-600"
@@ -143,8 +143,40 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Service Areas */}
+      {/* Why Choose Diamond Surface */}
       <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Diamond Surface</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+              <span className="text-gray-800">Fully compliant and registered supplier</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+              <span className="text-gray-800">Professional, uniformed cleaning staff</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+              <span className="text-gray-800">Flexible schedules & emergency call-outs</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+              <span className="text-gray-800">Eco-friendly products on request</span>
+            </div>
+            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+              <span className="text-gray-800">Affordable packages tailored to client needs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Areas</h2>
@@ -164,6 +196,19 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Previous Work Experience */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Previous Work & Experience</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We have delivered services to private homes, student apartments, and small office blocks in Gauteng. 
+              Our references are available upon request.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -179,9 +224,9 @@ const Services = () => {
                 Get Your Free Quote
               </Button>
             </Link>
-            <a href="tel:+27111234567">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
-                Call Now: +27 11 123 4567
+            <a href="tel:+27616998601">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+                Call Now: +27 61 969 8601
               </Button>
             </a>
           </div>
