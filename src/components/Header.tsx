@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, Phone } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,13 +18,18 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <Sparkles className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">Diamond Surfaces</span>
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <Sparkles className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <span className="text-xl font-bold text-gray-900">Diamond Surfaces</span>
+              <p className="text-sm text-gray-500 -mt-1">Professional Cleaning</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,7 +40,7 @@ const Header = () => {
                 to={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-blue-600 border-b-2 border-blue-600"
+                    ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}
               >
@@ -44,11 +49,15 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Phone Number and CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-2 text-gray-600">
+              <Phone className="h-4 w-4" />
+              <span className="text-sm font-medium">+27 11 234 5678</span>
+            </div>
             <Link to="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                Get Free Quote
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2">
+                Get Quote
               </Button>
             </Link>
           </div>
@@ -83,10 +92,14 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
+              <div className="px-3 py-2 space-y-2">
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm">+27 11 234 5678</span>
+                </div>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                    Get Free Quote
+                    Get Quote
                   </Button>
                 </Link>
               </div>

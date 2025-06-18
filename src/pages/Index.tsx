@@ -1,92 +1,98 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Home, Building2, Sparkles, CheckCircle, Star, Quote } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Star, CheckCircle, Phone } from "lucide-react";
 
 const Index = () => {
-  const services = [
-    {
-      title: "Residential Cleaning",
-      description: "Professional home cleaning services for a spotless living space",
-      icon: Home,
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop&crop=center"
-    },
-    {
-      title: "Commercial Cleaning",
-      description: "Office and business cleaning solutions to maintain professional environments",
-      icon: Building2,
-      image: "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=400&h=300&fit=crop&crop=center"
-    },
-    {
-      title: "Specialized Cleaning",
-      description: "Expert carpet, upholstery, and deep cleaning services",
-      icon: Sparkles,
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop&crop=center"
-    }
-  ];
-
-  const benefits = [
-    "Trained & Insured Staff",
-    "Eco-Friendly Products",
-    "Flexible Scheduling",
-    "Affordable Rates",
-    "100% Satisfaction Guarantee",
-    "Free Quotes"
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Mitchell",
-      location: "Johannesburg",
-      text: "Diamond Surfaces transformed our office space! Their attention to detail is incredible and the team is so professional.",
-      rating: 5
-    },
-    {
-      name: "David Thompson",
-      location: "Centurion",
-      text: "Been using their residential cleaning service for 6 months. Always punctual, thorough, and trustworthy.",
-      rating: 5
-    },
-    {
-      name: "Lisa van der Merwe",
-      location: "Midrand",
-      text: "Their carpet cleaning service saved our lounge suite! Thought we'd need to replace it but they made it look brand new.",
-      rating: 5
-    }
-  ];
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Expert Residential & Commercial
-            <span className="block text-blue-200">Cleaning in South Africa</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Diamond Surfaces provides professional cleaning services for homes and businesses. 
-            Experience the difference quality makes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                Get Your Free Quote
-              </Button>
-            </Link>
-            <Link to="/services">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                View Our Services
-              </Button>
-            </Link>
+      <section className="bg-gray-50 py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                  Get a <span className="text-blue-600">Sparkling</span>
+                  <br />
+                  <span className="text-blue-600">Clean</span> Home Today!
+                </h1>
+                <p className="text-xl text-gray-600 mt-6 max-w-xl">
+                  Experience premium residential cleaning services across South Africa. 
+                  Our trained professionals use eco-friendly products to make your home shine.
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg">
+                    Get Free Quote →
+                  </Button>
+                </Link>
+                <a href="tel:+27112345678">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-2 border-green-500 text-green-600 hover:bg-green-50 px-8 py-4 text-lg font-semibold rounded-lg"
+                  >
+                    <Phone className="h-5 w-5 mr-2" />
+                    Call Now: +27 11 234 5678
+                  </Button>
+                </a>
+              </div>
+
+              {/* Customer Reviews */}
+              <div className="flex items-center space-x-6">
+                <div className="flex -space-x-2">
+                  <div className="w-12 h-12 rounded-full bg-teal-400 border-2 border-white"></div>
+                  <div className="w-12 h-12 rounded-full bg-green-400 border-2 border-white"></div>
+                  <div className="w-12 h-12 rounded-full bg-emerald-400 border-2 border-white"></div>
+                  <div className="w-12 h-12 rounded-full bg-cyan-400 border-2 border-white"></div>
+                </div>
+                <div>
+                  <div className="flex items-center space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 font-medium">500+ Happy Customers</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Kitchen Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&crop=center"
+                  alt="Modern clean kitchen"
+                  className="w-full h-[500px] object-cover"
+                />
+                
+                {/* Satisfaction Guarantee Badge */}
+                <div className="absolute bottom-6 left-6">
+                  <Card className="bg-white p-4 shadow-lg border-0 rounded-xl">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                        <CheckCircle className="h-6 w-6 text-green-600" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900">100% Satisfaction</p>
+                        <p className="text-gray-600 text-sm">Guaranteed Results</p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Services Overview Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -99,86 +105,29 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <div className="aspect-video overflow-hidden rounded-t-lg">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-3">
-                    <service.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link to="/services">
-                    <Button variant="outline" className="w-full">
-                      Learn More
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Diamond Surfaces?
-            </h2>
-            <p className="text-xl text-gray-600">
-              We're committed to delivering exceptional cleaning services with unmatched quality and reliability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-                <span className="text-gray-800 font-medium">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-600">
-              Don't just take our word for it - hear from our satisfied customers.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
-                <CardContent className="p-0">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <Quote className="h-8 w-8 text-blue-600 mb-4" />
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                  <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-gray-600 text-sm">{testimonial.location}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Residential Cleaning</h3>
+              <p className="text-gray-600 mb-4">Professional home cleaning services for a spotless living space</p>
+              <Link to="/services">
+                <Button variant="outline" className="w-full">Learn More</Button>
+              </Link>
+            </Card>
+            
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Commercial Cleaning</h3>
+              <p className="text-gray-600 mb-4">Office and business cleaning solutions to maintain professional environments</p>
+              <Link to="/services">
+                <Button variant="outline" className="w-full">Learn More</Button>
+              </Link>
+            </Card>
+            
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Specialized Cleaning</h3>
+              <p className="text-gray-600 mb-4">Expert carpet, upholstery, and deep cleaning services</p>
+              <Link to="/services">
+                <Button variant="outline" className="w-full">Learn More</Button>
+              </Link>
+            </Card>
           </div>
         </div>
       </section>
@@ -199,9 +148,9 @@ const Index = () => {
                 Get Free Quote Now
               </Button>
             </Link>
-            <a href="tel:+27111234567">
+            <a href="tel:+27112345678">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                Call: +27 11 123 4567
+                Call: +27 11 234 5678
               </Button>
             </a>
           </div>
