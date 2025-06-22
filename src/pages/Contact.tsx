@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -96,14 +96,14 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-emerald-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Get Your Free Quote
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
             Ready to experience the Diamond Surfaces difference? Contact us today for a 
             personalized quote tailored to your cleaning needs.
           </p>
@@ -116,17 +116,17 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Contact Form */}
-            <Card>
+            <Card className="bg-gray-800 border-gray-700">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Request Your Free Quote</CardTitle>
-                <p className="text-gray-600">
+                <CardTitle className="text-2xl text-white">Request Your Free Quote</CardTitle>
+                <p className="text-gray-300">
                   Fill out the form below and we'll get back to you within 24 hours with a customized quote.
                 </p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="name" className="text-gray-300">Full Name *</Label>
                     <Input
                       id="name"
                       name="name"
@@ -135,11 +135,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Enter your full name"
                       required
+                      className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email" className="text-gray-300">Email Address *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -148,11 +149,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Enter your email"
                       required
+                      className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Label htmlFor="phone" className="text-gray-300">Phone Number *</Label>
                     <Input
                       id="phone"
                       name="phone"
@@ -161,16 +163,17 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="+27 XX XXX XXXX"
                       required
+                      className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="service">Service Interested In</Label>
+                    <Label htmlFor="service" className="text-gray-300">Service Interested In</Label>
                     <Select value={formData.service} onValueChange={handleSelectChange}>
-                      <SelectTrigger>
+                      <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="bg-gray-700 border-gray-600">
                         <SelectItem value="residential-standard">Standard House Cleaning</SelectItem>
                         <SelectItem value="residential-deep">Deep Cleaning</SelectItem>
                         <SelectItem value="residential-move">Move-In/Move-Out Cleaning</SelectItem>
@@ -185,7 +188,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Additional Details</Label>
+                    <Label htmlFor="message" className="text-gray-300">Additional Details</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -193,10 +196,11 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Tell us about your cleaning needs, property size, frequency, etc."
                       rows={4}
+                      className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button type="submit" size="lg" className="w-full bg-emerald-700 hover:bg-emerald-600">
                     Get My Free Quote
                   </Button>
                 </form>
@@ -209,35 +213,35 @@ const Contact = () => {
               {/* Contact Methods */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {contactInfo.map((contact, index) => (
-                  <Card key={index} className="hover:shadow-md transition-shadow">
+                  <Card key={index} className="hover:shadow-md bg-gray-800 border-gray-700 transition-shadow">
                     <CardContent className="p-6 text-center">
                       <div className="flex justify-center mb-4">
-                        <div className="p-3 bg-blue-100 rounded-full">
-                          <contact.icon className="h-6 w-6 text-blue-600" />
+                        <div className="p-3 bg-emerald-800 rounded-full">
+                          <contact.icon className="h-6 w-6 text-emerald-400" />
                         </div>
                       </div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{contact.title}</h3>
+                      <h3 className="font-semibold text-white mb-2">{contact.title}</h3>
                       {contact.action ? (
                         <a 
                           href={contact.action} 
-                          className="text-blue-600 hover:text-blue-800 font-medium block mb-1"
+                          className="text-emerald-400 hover:text-emerald-300 font-medium block mb-1"
                         >
                           {contact.info}
                         </a>
                       ) : (
-                        <p className="text-gray-900 font-medium mb-1">{contact.info}</p>
+                        <p className="text-white font-medium mb-1">{contact.info}</p>
                       )}
-                      <p className="text-gray-600 text-sm">{contact.description}</p>
+                      <p className="text-gray-300 text-sm">{contact.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
               {/* Business Hours */}
-              <Card>
+              <Card className="bg-gray-800 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Clock className="h-5 w-5 text-blue-600" />
+                  <CardTitle className="flex items-center space-x-2 text-white">
+                    <Clock className="h-5 w-5 text-emerald-400" />
                     <span>Business Hours</span>
                   </CardTitle>
                 </CardHeader>
@@ -245,8 +249,8 @@ const Contact = () => {
                   <div className="space-y-3">
                     {businessHours.map((schedule, index) => (
                       <div key={index} className="flex justify-between items-center">
-                        <span className="text-gray-700">{schedule.day}</span>
-                        <span className="text-gray-900 font-medium">{schedule.hours}</span>
+                        <span className="text-gray-300">{schedule.day}</span>
+                        <span className="text-white font-medium">{schedule.hours}</span>
                       </div>
                     ))}
                   </div>
@@ -254,14 +258,14 @@ const Contact = () => {
               </Card>
 
               {/* Emergency Contact */}
-              <Card className="bg-red-50 border-red-200">
+              <Card className="bg-red-900 border-red-800">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-red-800 mb-2">Emergency Cleaning Services</h3>
-                  <p className="text-red-700 text-sm mb-3">
+                  <h3 className="font-semibold text-red-200 mb-2">Emergency Cleaning Services</h3>
+                  <p className="text-red-300 text-sm mb-3">
                     Need urgent cleaning assistance? We offer emergency services for critical situations.
                   </p>
-                  <a href="tel:+27111234567">
-                    <Button variant="outline" className="border-red-300 text-red-700 hover:bg-red-100">
+                  <a href="tel:+27619698601">
+                    <Button variant="outline" className="border-red-500 text-red-300 hover:bg-red-800">
                       Call Emergency Line
                     </Button>
                   </a>
@@ -274,11 +278,11 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Service Area</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Service Area</h2>
+            <p className="text-xl text-gray-300">
               We proudly serve the greater Johannesburg metropolitan area and surrounding regions.
             </p>
           </div>
@@ -290,21 +294,21 @@ const Contact = () => {
               "Pretoria", "Randburg", "Roodepoort", "Boksburg", 
               "Fourways", "Rosebank", "Melville", "Bryanston"
             ].map((area, index) => (
-              <div key={index} className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-center">
-                <span className="text-blue-800 font-medium text-sm">{area}</span>
+              <div key={index} className="bg-emerald-800 border border-emerald-700 rounded-lg p-3 text-center">
+                <span className="text-emerald-200 font-medium text-sm">{area}</span>
               </div>
             ))}
           </div>
 
           <div className="text-center">
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-300 mb-4">
               Don't see your area listed? Contact us anyway - we may still be able to help!
             </p>
-            <a href="tel:+27111234567">
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                Check Service Availability
+            <Link to="/contact">
+              <Button className="bg-emerald-700 hover:bg-emerald-600">
+                Contact Us Now
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
