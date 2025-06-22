@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-emerald-800 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <div>
@@ -56,7 +56,7 @@ const Header = () => {
               <span className="text-sm font-medium">079 238 6289</span>
             </div>
             <Link to="/contact">
-              <Button className="bg-emerald-700 hover:bg-emerald-600 text-white px-6 py-2">
+              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2">
                 Get Quote
               </Button>
             </Link>
@@ -99,7 +99,7 @@ const Header = () => {
                   <span className="text-sm">079 238 6289</span>
                 </div>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-emerald-700 hover:bg-emerald-600">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
                     Get Quote
                   </Button>
                 </Link>
