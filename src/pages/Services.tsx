@@ -224,7 +224,7 @@ const Services = () => {
                 Get Your Free Quote
               </Button>
             </Link>
-            <a href="tel:+27616998601">
+            <a href="tel:+27619698601">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Call Now: +27 61 969 8601
               </Button>

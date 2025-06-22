@@ -27,7 +27,7 @@ const Header = () => {
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <div>
-              <span className="text-xl font-bold text-gray-900">Diamond Surfaces</span>
+              <span className="text-xl font-bold text-gray-900">Diamond Surface</span>
               <p className="text-sm text-gray-500 -mt-1">Professional Cleaning</p>
             </div>
           </Link>
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-gray-600">
               <Phone className="h-4 w-4" />
-              <span className="text-sm font-medium">+27 11 234 5678</span>
+              <span className="text-sm font-medium">079 238 6289</span>
             </div>
             <Link to="/contact">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2">
@@ -95,7 +95,7 @@ const Header = () => {
               <div className="px-3 py-2 space-y-2">
                 <div className="flex items-center space-x-2 text-gray-600">
                   <Phone className="h-4 w-4" />
-                  <span className="text-sm">+27 11 234 5678</span>
+                  <span className="text-sm">079 238 6289</span>
                 </div>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full bg-blue-600 hover:bg-blue-700">

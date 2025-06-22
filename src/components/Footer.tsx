@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Sparkles className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">Diamond Surfaces</span>
+              <span className="text-xl font-bold">Diamond Surface</span>
             </div>
             <p className="text-gray-300 text-sm">
               Professional cleaning services for homes and businesses across South Africa. 
@@ -48,11 +48,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">+27 11 123 4567</span>
+                <span className="text-gray-300">079 238 6289</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-blue-400" />
+                <span className="text-gray-300">+27 61 969 8601</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">info@diamondsurfaces.co.za</span>
+                <span className="text-gray-300">murendenibuhle6@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400" />
@@ -68,7 +72,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-300 text-sm">
-            © 2024 Diamond Surfaces. All rights reserved.
+            © 2024 Diamond Surface. All rights reserved.
           </p>
         </div>
       </div>

@@ -32,14 +32,14 @@ const Index = () => {
                     Get Free Quote →
                   </Button>
                 </Link>
-                <a href="tel:+27112345678">
+                <a href="tel:+27619698601">
                   <Button 
                     size="lg" 
                     variant="outline" 
                     className="border-2 border-green-500 text-green-600 hover:bg-green-50 px-8 py-4 text-lg font-semibold rounded-lg"
                   >
                     <Phone className="h-5 w-5 mr-2" />
-                    Call Now: +27 11 234 5678
+                    Call Now: +27 61 969 8601
                   </Button>
                 </a>
               </div>
@@ -139,7 +139,7 @@ const Index = () => {
             Ready for a Spotless Space?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get your free, no-obligation quote today and discover why Diamond Surfaces 
+            Get your free, no-obligation quote today and discover why Diamond Surface 
             is South Africa's trusted cleaning partner.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -148,9 +148,9 @@ const Index = () => {
                 Get Free Quote Now
               </Button>
             </Link>
-            <a href="tel:+27112345678">
+            <a href="tel:+27619698601">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                Call: +27 11 234 5678
+                Call: +27 61 969 8601
               </Button>
             </a>
           </div>

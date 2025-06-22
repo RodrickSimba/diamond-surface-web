@@ -62,28 +62,28 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      info: "+27 11 123 4567",
+      info: "079 238 6289",
       description: "Call us for immediate assistance",
-      action: "tel:+27111234567"
+      action: "tel:0792386289"
     },
     {
       icon: MessageSquare,
       title: "WhatsApp",
-      info: "+27 72 123 4567",
+      info: "+27 61 969 8601",
       description: "Message us on WhatsApp",
-      action: "https://wa.me/27721234567"
+      action: "https://wa.me/27619698601"
     },
     {
       icon: Mail,
       title: "Email",
-      info: "info@diamondsurfaces.co.za",
+      info: "murendenibuhle6@gmail.com",
       description: "Send us an email anytime",
-      action: "mailto:info@diamondsurfaces.co.za"
+      action: "mailto:murendenibuhle6@gmail.com"
     },
     {
       icon: MapPin,
       title: "Service Area",
-      info: "Greater Johannesburg",
+      info: "Johannesburg",
       description: "We serve the entire region",
       action: null
     }
