@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -63,29 +62,29 @@ const Services = () => {
             <Icon className="h-8 w-8 text-white" />
           </div>
         </div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">{title}</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">{title}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service: any, index: number) => (
-          <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+          <Card key={index} className="hover:shadow-lg transition-shadow duration-300 bg-gray-800 border-gray-700">
             <CardHeader>
-              <CardTitle className="text-xl text-gray-900">{service.name}</CardTitle>
+              <CardTitle className="text-xl text-white">{service.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <p className="text-gray-300 mb-4">{service.description}</p>
               <div className="space-y-2">
-                <h4 className="font-semibold text-gray-800">What's Included:</h4>
+                <h4 className="font-semibold text-gray-200">What's Included:</h4>
                 {service.features.map((feature: string, featureIndex: number) => (
                   <div key={featureIndex} className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{feature}</span>
+                    <CheckCircle className="h-4 w-4 text-emerald-500 flex-shrink-0" />
+                    <span className="text-sm text-gray-300">{feature}</span>
                   </div>
                 ))}
               </div>
               <div className="mt-6">
                 <Link to="/contact">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
                     Book This Service
                   </Button>
                 </Link>
@@ -98,14 +97,14 @@ const Services = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-emerald-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Our Professional Cleaning Services
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
             Comprehensive cleaning solutions for every need. From residential deep cleans 
             to commercial maintenance, we deliver exceptional results.
           </p>
@@ -121,7 +120,7 @@ const Services = () => {
             title="🏠 Residential Cleaning"
             icon={Home}
             services={residentialServices}
-            bgColor="bg-blue-600"
+            bgColor="bg-emerald-600"
           />
 
           {/* Commercial Services */}
@@ -129,7 +128,7 @@ const Services = () => {
             title="🏢 Commercial Cleaning"
             icon={Building2}
             services={commercialServices}
-            bgColor="bg-green-600"
+            bgColor="bg-emerald-700"
           />
 
           {/* Specialized Services */}
@@ -137,50 +136,50 @@ const Services = () => {
             title="🧼 Specialized Cleaning Services"
             icon={Sparkles}
             services={specializedServices}
-            bgColor="bg-purple-600"
+            bgColor="bg-emerald-800"
           />
 
         </div>
       </section>
 
       {/* Why Choose Diamond Surface */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Diamond Surface</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Diamond Surface</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-              <span className="text-gray-800">Fully compliant and registered supplier</span>
+            <div className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-emerald-500 flex-shrink-0" />
+              <span className="text-gray-200">Fully compliant and registered supplier</span>
             </div>
-            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-              <span className="text-gray-800">Professional, uniformed cleaning staff</span>
+            <div className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-emerald-500 flex-shrink-0" />
+              <span className="text-gray-200">Professional, uniformed cleaning staff</span>
             </div>
-            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-              <span className="text-gray-800">Flexible schedules & emergency call-outs</span>
+            <div className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-emerald-500 flex-shrink-0" />
+              <span className="text-gray-200">Flexible schedules & emergency call-outs</span>
             </div>
-            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-              <span className="text-gray-800">Eco-friendly products on request</span>
+            <div className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-emerald-500 flex-shrink-0" />
+              <span className="text-gray-200">Eco-friendly products on request</span>
             </div>
-            <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-              <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-              <span className="text-gray-800">Affordable packages tailored to client needs</span>
+            <div className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg">
+              <CheckCircle className="h-6 w-6 text-emerald-500 flex-shrink-0" />
+              <span className="text-gray-200">Affordable packages tailored to client needs</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Areas */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Areas</h2>
-            <p className="text-xl text-gray-600">We proudly serve the following areas across South Africa:</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Service Areas</h2>
+            <p className="text-xl text-gray-300">We proudly serve the following areas across South Africa:</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -188,7 +187,7 @@ const Services = () => {
               "Johannesburg", "Centurion", "Midrand", "Sandton", 
               "Pretoria", "Randburg", "Roodepoort", "Boksburg"
             ].map((area, index) => (
-              <Badge key={index} variant="outline" className="p-3 text-lg">
+              <Badge key={index} variant="outline" className="p-3 text-lg border-emerald-500 text-emerald-400">
                 {area}
               </Badge>
             ))}
@@ -197,11 +196,11 @@ const Services = () => {
       </section>
 
       {/* Previous Work Experience */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Previous Work & Experience</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Previous Work & Experience</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We have delivered services to private homes, student apartments, and small office blocks in Gauteng. 
               Our references are available upon request.
             </p>
@@ -210,22 +209,22 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-emerald-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
             Contact us today for a free quote tailored to your specific cleaning needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button size="lg" className="bg-white text-emerald-800 hover:bg-gray-100 text-lg px-8 py-3">
                 Get Your Free Quote
               </Button>
             </Link>
             <a href="tel:+27619698601">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button size="lg" className="bg-white text-emerald-800 hover:bg-gray-100 text-lg px-8 py-3">
                 Call Now: +27 61 969 8601
               </Button>
             </a>
